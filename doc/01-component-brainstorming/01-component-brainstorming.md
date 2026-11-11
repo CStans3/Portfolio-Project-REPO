@@ -1,8 +1,8 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Name**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Dot Number**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **Due Date**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Connor Stanfield**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
+- **Stanfield.66**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
+- **11/13 @ 1:50 PM EST**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
 
 ## Assignment Overview
 
@@ -29,8 +29,6 @@ implement.
 
 ## Assignment Checklist
 
-<!-- TODO: browse the checklist then delete this comment -->
-
 To be sure you have completed everything on this assignment, we have littered
 this document with TODO comments. You can browse all of them in VSCode by
 opening the TODOs window from the sidebar. The icon looks like a tree and will
@@ -52,8 +50,6 @@ to the tree diagram (you may remove this one as well):
 
 ## Assignment Learning Objectives
 
-<!-- TODO: read the assignment learning objectives then delete this comment -->
-
 Without learning objectives, there really is no clear reason why a particular
 assessment or activity exists. Therefore, to be completely transparent, here is
 what we're hoping you will learn through this particular aspect of the portfolio
@@ -66,8 +62,6 @@ project. Specifically, students should be able to:
    discipline
 
 ## Assignment Rubric: 10 Points
-
-<!-- TODO: read the assignment rubric then delete this comment -->
 
 Again, to be completely transparent, most of the portfolio project, except the
 final submission, is designed as a formative assessment. Formative assessments
@@ -106,23 +100,15 @@ Below is further rationale/explanation for the rubric items above:
 > brainstorming. Plus it helps us get to know you better! Feel free to share
 > images in this section.
 
-<!-- TODO: briefly talk about your interests then delete this comment.
-Also, protip: you can preview what your response looks like by hitting
-the magnifying glass icon in the upper-right corner or pressing CTRL+K and
-then V. This kind of button combination is called a chord, for whatever
-reason -->
+I have a huge personal interest in gaming as I love many genres of the hobby. I enjoy rpgs, fps, co-op, party, racing and even more types of games. I'm hoping to create something that will help me get a grasp on how games are made with this project. As per future career goals I'm totally in the dark I don't really know how to move forward after earning a degree. My biggest hope is landing a remote-work job but I think I could be satisfied in any spot whether it's working on websites, in gaming, networking, or just about anything I've learned skills for during my time at OSU.
 
 ## Assignment
-
-<!-- TODO: read the assignment section then delete this comment -->
 
 As previously stated, you are tasked with brainstorming 3 possible components.
 To aid you in this process, we have provided [some example components][example-components]
 that may help you in your brainstorming. All of these components were made at
 some point by one of your peers, so you should feel confident that you can
 accomplish any of them.
-
-<!-- TODO: browse the list of possible projects then delete this comment -->
 
 There is no requirement that you use any of the components listed above.
 If you want to model something else, go for it! Very common early object
@@ -142,8 +128,6 @@ list-like components that have different ways of manipulating the data. Think
 about different ways you might allow a client to manipulate your component.
 
 ### Example Component
-
-<!-- TODO: review this example component then delete this comment -->
 
 To help you brainstorm a few components, we've provided an example below of a
 component you already know well: NaturalNumber. We highly recommend that you
@@ -211,47 +195,58 @@ will likely refine your design to make your implementation easier to use.
 
 > Please use this section to share your designs.
 
-- Component Design #1: <!-- TODO: give component a name then delete this comment -->
+- Component Design #1: Game Inventory
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - This component represents a collection of items in a video game. Each item has a name and quantity. It could be used to track potions, crafting materials, ammuniton, or other items that a player collects.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void add(String item, int amount)`: adds `item` by a number `amount` to `this`
+    - `void remove(String item, int amount)`: removes `item` by a number `amount` from `this`
+    - `int quantity(String item)`: reports how many `item` are in `this`
+    - `Set<String> items()`: holds `items` found in players' inventories
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `boolean contains(String item)`: reports whether `item` is found in `this`
+    - `int totalQuantity()`: reports how many of `this`
+    - `void removeAll(String item)`: removes all instances of `item` from `this`
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, items and quantities change when the player collects or uses items.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - No custom internal classes are necessary. A map could store item names and quantities.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Constants could be added later if needed
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, `contains(item)` can check whether `quantity(item) > 0`. The `removeAll(item)` method can retrieve the quantity and remove that entire amount.
 
-- Component Design #2: <!-- TODO: give component a name then delete this comment -->
+- Component Design #2: Quest Tracker
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - This component tracks quests in an RPG or MMO. Each quest has a unique name and a completion status. Players could use it to keep track of completed and unfinished objectives.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void addQuest(String name)`: adds `name` to `this`
+    - `removeQuest(String name)`: removes `name` from `this`
+    - `SetCompleted(String name, boolean completed)`: reports whether `completed` has been paired with `name`
+    - `boolean isCompleted(String name)`: reports whether `name` objective has been fulfilled
+    - `Set<String> quests()`: holds `quests` found in players' journals
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+  - `boolean containsQuest(String name)`: reports whether `name` found in `this`
+    - `int completedCount()`: reports how many objectives completed
+    - `int unfinishedCount()`: reports how many objectives left
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, quests can be added, removed, completed, or marked incomplete.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - A map could associate quest names with Boolean completion values.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Completion can be represented with a Boolean.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, such as `completedCount()` where it can iterate through `quests()` and use `isCompleted` to count completed quests.
 
 - Component Design #3: <!-- TODO: give component a name then delete this comment -->
   - **Description**:
