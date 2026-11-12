@@ -1,12 +1,10 @@
 # Portfolio Part 1: Component Brainstorming
 
-- **Connor Stanfield**: <!-- TODO: fill with first and last name (e.g., Brutus Buckeye) then delete this comment -->
-- **Stanfield.66**: <!-- TODO: fill with OSU dot number (e.g., buckeye.17) then delete this comment -->
-- **11/13 @ 1:50 PM EST**: <!-- TODO: fill with due date and time (e.g., 10/17 @ 3:10 PM EST) then delete this comment -->
+- **Connor Stanfield**:
+- **Stanfield.66**:
+- **11/13 @ 1:50 PM EST**:
 
 ## Assignment Overview
-
-<!-- TODO: read the assignment overview then delete this comment -->
 
 The overall goal of the portfolio project is to have you design and implement
 your own OSU component. There are no limits to what you choose to design and
@@ -248,26 +246,39 @@ will likely refine your design to make your implementation easier to use.
       Answer, explain, and give at least one example:
       - Yes, such as `completedCount()` where it can iterate through `quests()` and use `isCompleted` to count completed quests.
 
-- Component Design #3: <!-- TODO: give component a name then delete this comment -->
+- Component Design #3: Character Stat Sheet
   - **Description**:
-    - <!-- TODO: describe your component then delete this comment -->
+    - This component represents the basic statistics of a character in an rpg. It tracks current health, maximum health, attack, and defense. This compoment could be used in a game to manage a character's health during combat and determine whether the character is still alive.
   - **Kernel Methods**:
-    - <!-- TODO: list kernel methods then delete this comment -->
+    - `void setMaxHealth(int maxHp)`: sets `this` to `maxHp`
+    - `void setHealth(int health)`: sets `this` to `health`
+    - `void setAttack(int attack)`: sets `this` to `attack`
+    - `void setDefense(int defense)`: sets `this` to `defense`
+
+    - `int maxHealth()`: returns `maxHp` amount
+    - `int health()`: returns `health` value
+    - `int attack()`: returns `attack` rating
+    - `int defense()`: returns `defense` rating
   - **Secondary Methods**:
-    - <!-- TODO: list secondary methods then delete this comment -->
+    - `void takeDamage(int damage)`: subtracts `damage` from `this`
+    - `void heal(int amount)`: adds `health` to `this`
+    - `boolean isAlive()`: reports whether `this` has less than 1 health
+    - `int healthMissing()`: reports amount from subtracting `health` from `maxHp`
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, a character's health, attack, and defense can change during gameplay.
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Four integer fields should be enough to represent the component.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Constants could be used to define default statistics.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - <!-- TODO: provide an argument then delete this comment -->
+      - Yes, `isAlive()` can return `health() > 0`. `The heal()` method can retrieve the current and maximum health, calculate the new health without exceeding the maximum, and call `setHealth()`.
+
+> All three deisngs would also inerhit the required `Standard` operations: `clear()`, `newInstance()`, and `transferFrom()`.
 
 ## Post-Assignment
 
@@ -275,8 +286,6 @@ The following sections detail everything that you should do once you've
 completed the assignment.
 
 ### Changelog
-
-<!-- TODO: create CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -315,8 +324,6 @@ of development.
 
 ### Submission
 
-<!-- TODO: read the submission instructions then delete this comment -->
-
 If you have completed the assignment using this template, we recommend that
 you convert it to a PDF before submission. If you're not sure how, check out
 this [Markdown to PDF guide][markdown-to-pdf-guide]. However, PDFs should be
@@ -325,11 +332,7 @@ all your work is there before submitting. For future assignments, you will
 just be submitting a link to a pull request. This will be the only time
 you have to submit any PDFs.
 
-<!-- TODO: upload a PDF of this document and the CHANGELOG to Carmen then delete this comment -->
-
 ### Peer Review
-
-<!-- TODO: review the peer review guidelines then delete this comment -->
 
 Following the completion of this assignment, you will be assigned three
 students' component brainstorming assignments for review. Your job during the
@@ -355,8 +358,6 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [example-components]: https://therenegadecoder.com/code/the-never-ending-list-of-small-programming-project-ideas/
 [markdown-to-pdf-guide]: https://therenegadecoder.com/blog/how-to-convert-markdown-to-a-pdf-3-quick-solutions/
