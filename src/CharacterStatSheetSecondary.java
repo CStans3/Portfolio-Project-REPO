@@ -80,4 +80,18 @@ public abstract class CharacterStatSheetSecondary
         return this.maxHealth() - this.health();
     }
 
+    /**
+     * Returns a string representation of the character statistics.
+     * 
+     * @return the character statistics as a String
+     */
+    @Override
+    public String toString() {
+        // Build a readable representation using kernel getters
+        String result = "Health: " + this.health() + "/" + this.maxHealth()
+                + ", Attack: " + this.attack() + ", Defense: " + this.defense();
+
+        return result;
+    }
+
 }
