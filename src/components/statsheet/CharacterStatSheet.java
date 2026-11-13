@@ -1,3 +1,4 @@
+package components.statsheet;
 
 /**
  * Enhanced interface for an RPG character stat sheet.

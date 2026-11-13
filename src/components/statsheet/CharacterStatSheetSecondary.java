@@ -1,3 +1,5 @@
+package components.statsheet;
+
 /**
  * Secondary implementation of the CharacterStatSheet component.
  *

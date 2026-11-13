@@ -1,3 +1,5 @@
+package components.statsheet;
+
 import components.sequence.Sequence;
 import components.sequence.Sequence1L;
 
