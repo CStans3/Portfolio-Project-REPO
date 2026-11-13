@@ -202,4 +202,17 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
         this.stats.replaceEntry(ATTACK_INDEX, attack);
     }
 
+    /**
+     * Updates the character's defense statistic.
+     *
+     * @param defense
+     *            the new defense stat
+     */
+    @Override
+    public void setDefense(int defense) {
+        assert defense >= 0 : "Defense can't be negative";
+
+        // Replace the defense value
+        this.stats.replaceEntry(DEFENSE_INDEX, defense);
+    }
 }
