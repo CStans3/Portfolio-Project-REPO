@@ -51,3 +51,21 @@ the following form: YYYY.0M.0D.
 ### Added
 
 - Published new branch and pushed pending changes.
+
+- Created CharacterStatSheetKernel interface.
+- Created CharacterStatSheet enhanced interface.
+- Added mathematical model and representation invariants.
+- Added Javadoc contracts for all interface methods.
+- Designed the component hierarchy diagram.
+
+### Changed
+
+- Separated kernel and secondary operations.
+
+- Removed console input and output from the component API.
+
+- Changed CharacterStatSheet from a proof-of-concept
+  class into an enhanced interface.
+
+- Defined default character statistics for the
+  Standard component implementation.
