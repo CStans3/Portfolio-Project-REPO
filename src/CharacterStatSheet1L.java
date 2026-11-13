@@ -154,7 +154,7 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
     }
 
     /**
-     * Updates teh character's current health.
+     * Updates the character's current health.
      *
      * @param health
      *            the new current health
