@@ -188,4 +188,18 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
 
     }
 
+    /**
+     * Updates the character's attack statistic.
+     *
+     * @param attack
+     *            the new attack stat
+     */
+    @Override
+    public void setAttack(int attack) {
+        assert attack >= 0 : "Attack can't be negative";
+
+        // Replace the attaack value
+        this.stats.replaceEntry(ATTACK_INDEX, attack);
+    }
+
 }
