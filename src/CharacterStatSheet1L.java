@@ -83,4 +83,30 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
         this.createNewRep();
     }
 
+    /**
+     * Creates a character with the given statistics.
+     *
+     * @param maxHealth
+     *            the maximum health
+     * @param attack
+     *            the attack stat
+     * @param defense
+     *            the defense stat
+     * @requires maxHealth > 0 && attack >= 0 && defense >= 0
+     */
+    public CharacterStatSheet1L(int maxHealth, int attack, int defense) {
+        assert maxHealth > 0 : "Max health must be positive";
+        assert attack >= 0 : "Attack can't be negative";
+        assert defense >= 0 : "Defense can't be negative";
+
+        // Initialize the representation with default stats
+        this.createNewRep();
+
+        // Replace the defaults with the provided stats
+        this.setMaxHealth(maxHealth);
+        this.setHealth(maxHealth);
+        this.setAttack(attack);
+        this.setDefense(defense);
+    }
+
 }
