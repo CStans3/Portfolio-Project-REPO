@@ -112,4 +112,21 @@ public class CharacterStatSheet1LTest {
         assertEquals(TEST_HEALTH, character.maxHealth());
     }
 
+    /**
+     * Tests increasing max health.
+     */
+    @Test
+    public void testSetMaxHealthIncrease() {
+        // Create a character with reduced health
+        CharacterStatSheet character = new CharacterStatSheet1L();
+        character.setHealth(TEST_HEALTH);
+
+        // Increase max hp
+        character.setMaxHealth(MAX_HEALTH);
+
+        // Current health should remain unchanged
+        assertEquals(TEST_HEALTH, character.health());
+        assertEquals(MAX_HEALTH, character.maxHealth());
+    }
+
 }
