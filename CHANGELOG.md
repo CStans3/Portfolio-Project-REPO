@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Calendar Versioning](https://calver.org/) of
 the following form: YYYY.0M.0D.
 
-## [2026.11.11]
+## [0.1.0] - [2026.11.11]
 
 ### Added
 
@@ -14,6 +14,18 @@ the following form: YYYY.0M.0D.
 
 - Designed three possible components: Game Inventory,
   Quest Tracker, and Character Stat Sheet.
+
+### Removed
+
+- Removed TODO sections found in 01-component-brainstorming.md file
+
+### Changed
+
+- repurposed template CHANGELOG.md to better suit my implementation of this project.
+
+## [0.2.0] - [2026.11.11]
+
+### Added
 
 - Selected Character Stat Sheet for the portfolio project.
 
@@ -38,24 +50,24 @@ the following form: YYYY.0M.0D.
 - Documented the component selection, implementation,
   and design decisions for Part 2.
 
-### Removed
-
-- Removed TODO sections found in 01-component-brainstorming.md file
-
-### Changed
-
-- repurposed template CHANGELOG.md to better suit my implementation of this project.
-
-## [2026.12.11]
+## [0.2.1] - [2026.11.12]
 
 ### Added
 
 - Published new branch and pushed pending changes.
 
+## [0.3.0] - [2026.11.12]
+
+### Added
+
 - Created CharacterStatSheetKernel interface.
+
 - Created CharacterStatSheet enhanced interface.
+
 - Added mathematical model and representation invariants.
+
 - Added Javadoc contracts for all interface methods.
+
 - Designed the component hierarchy diagram.
 
 ### Changed
@@ -69,3 +81,30 @@ the following form: YYYY.0M.0D.
 
 - Defined default character statistics for the
   Standard component implementation.
+
+## [0.4.0] - [2026.11.12]
+
+### Added
+
+- Implemented CharacterStatSheetSecondary abstract class.
+
+- Implemented takeDamage, heal, isAlive, and healthMissing
+  using only kernel methods.
+
+- Added toString to display character statistics.
+
+- Added equals to compare two character stat sheets.
+
+- Added hashCode consistent with equals.
+
+- Added Javadoc and logical block comments.
+
+### Changed
+
+- Moved secondary method implementations into the
+  abstract class instead of the concrete representation.
+
+- Added precondition checks for damage and healing.
+
+- Updated the design to keep secondary methods
+  independent of representation fields.
