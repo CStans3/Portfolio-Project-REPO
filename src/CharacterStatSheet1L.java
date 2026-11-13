@@ -168,4 +168,24 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
         this.stats.replaceEntry(HEALTH_INDEX, health);
     }
 
+    /**
+     * Updates max health and caps current health if needed.
+     *
+     * @param maximum
+     *            the new maximum health
+     */
+    @Override
+    public void setMaxHealth(int maximum) {
+        assert maximum > 0 : "Maximum health must be positive";
+
+        // Replace the maximum health value
+        this.stats.replaceEntry(MAX_HEALTH_INDEX, maximum);
+
+        // Reduce current health if it exceeds the new maximum
+        if (this.health() > maximum) {
+            this.stats.replaceEntry(HEALTH_INDEX, maximum);
+        }
+
+    }
+
 }
