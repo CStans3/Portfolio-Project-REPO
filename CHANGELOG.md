@@ -108,3 +108,29 @@ the following form: YYYY.0M.0D.
 
 - Updated the design to keep secondary methods
   independent of representation fields.
+
+## [0.4.1] - [2026.11.12]
+
+### Changed
+
+- Added versions to the formatting of the changelog, found from [Calendar Versioning](https://calver.org/).
+- Additionally rearranged sections of changelog to properly represent meaningful changes.
+
+## [0.5.0] - [2026.11.13]
+
+### Added
+
+- kernel-implementation branch
+- CharacterStatSheet1L.java
+- constants to be used later
+- part 5 pre-assignment reflection
+
+### Changed
+
+- swapped from using `int` primitives in design to using `Sequence<Integer>` to fulfill data structure requirement
+
+## [0.5.1] - [2026.11.13]
+
+### Added
+
+-
