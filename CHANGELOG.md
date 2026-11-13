@@ -163,3 +163,9 @@ the following form: YYYY.0M.0D.
   operations for retrieving and replacing statistics.
 
 - Merged main branch with Kernel-Implementation branch.
+
+## [0.6.0] - [2026.11.13]
+
+### Added
+
+-
