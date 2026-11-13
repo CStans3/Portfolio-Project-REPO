@@ -20,7 +20,7 @@ public abstract class CharacterStatSheetSecondary
     public void takeDamage(int damage) {
         assert damage >= 0 : "Damage cannot be negative";
 
-        // Retrive the character's current health
+        // Retrieve the character's current health
         int currentHealth = this.health();
 
         // Apply damage without allowing health to become negative

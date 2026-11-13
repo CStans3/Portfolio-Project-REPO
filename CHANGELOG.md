@@ -116,7 +116,7 @@ the following form: YYYY.0M.0D.
 - Added versions to the formatting of the changelog, found from [Calendar Versioning](https://calver.org/).
 - Additionally rearranged sections of changelog to properly represent meaningful changes.
 
-## [0.5.0] - [2026.11.13]
+## [0.5.0] - [2026.11.12]
 
 ### Added
 
@@ -129,8 +129,37 @@ the following form: YYYY.0M.0D.
 
 - swapped from using `int` primitives in design to using `Sequence<Integer>` to fulfill data structure requirement
 
+### Removed
+
+- `todo`s from part 5 doc
+
 ## [0.5.1] - [2026.11.13]
 
 ### Added
 
--
+- Designed the CharacterStatSheet1L kernel implementation.
+
+- Selected `Sequence<Integer>` to represent character statistics.
+
+- Added representation convention and correspondence.
+
+- Implemented constructors and createNewRep.
+
+- Implemented all kernel getter and setter methods.
+
+- Implemented clear, newInstance, and transferFrom.
+
+- Added logical block comments and Javadoc.
+
+### Updated
+
+- Changed the representation from four separate integer
+  fields to a single `Sequence<Integer>`.
+
+- Defined fixed positions for health, maximum health,
+  attack, and defense.
+
+- Updated the kernel implementation to use Sequence
+  operations for retrieving and replacing statistics.
+
+- Merged main branch with Kernel-Implementation branch.
