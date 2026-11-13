@@ -52,10 +52,10 @@ public class CharacterStatSheet1LTest {
      */
     @Test
     public void testDefaultConstructor() {
-        // Create a character with default statistics.
+        // Create a character with default statistics
         CharacterStatSheet character = new CharacterStatSheet1L();
 
-        // Verify the default statistics.
+        // Verify the default statistics
         assertEquals(DEFAULT_HEALTH, character.health());
         assertEquals(DEFAULT_HEALTH, character.maxHealth());
         assertEquals(0, character.attack());
@@ -67,11 +67,11 @@ public class CharacterStatSheet1LTest {
      */
     @Test
     public void testParameterizedConstructor() {
-        // Create a character with custom statistics.
+        // Create a character with custom statistics
         CharacterStatSheet character = new CharacterStatSheet1L(MAX_HEALTH,
                 ATTACK, DEFENSE);
 
-        // Verify the starting statistics.
+        // Verify the starting statistics
         assertEquals(MAX_HEALTH, character.health());
         assertEquals(MAX_HEALTH, character.maxHealth());
         assertEquals(ATTACK, character.attack());
@@ -83,16 +83,33 @@ public class CharacterStatSheet1LTest {
      */
     @Test
     public void testSetHealth() {
-        // Create a default character.
+        // Create a default character
         CharacterStatSheet character = new CharacterStatSheet1L();
 
-        // Update current health.
+        // Update current health
         character.setHealth(TEST_HEALTH);
 
-        // Verify the updated and unchanged values.
+        // Verify the updated and unchanged values
         assertEquals(TEST_HEALTH, character.health());
         assertEquals(DEFAULT_HEALTH, character.maxHealth());
         assertEquals(0, character.attack());
         assertEquals(0, character.defense());
     }
+
+    /**
+     * Tests reducing maximum health below current health.
+     */
+    @Test
+    public void testSetMaxHealthDecrease() {
+        // Create a default character
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Reduce max health
+        character.setMaxHealth(TEST_HEALTH);
+
+        // Current health should also be reduced
+        assertEquals(TEST_HEALTH, character.health());
+        assertEquals(TEST_HEALTH, character.maxHealth());
+    }
+
 }
