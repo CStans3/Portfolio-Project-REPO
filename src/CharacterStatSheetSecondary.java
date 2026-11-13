@@ -68,4 +68,16 @@ public abstract class CharacterStatSheetSecondary
         return this.health() > 0;
     }
 
+    /**
+     * Reports how much health the character is missing.
+     *
+     * @return the amount of missing health
+     * @ensures healthMissing = this.maxHealth - this.health
+     */
+    @Override
+    public int healthMissing() {
+        // Calculate the difference between maximum and current health
+        return this.maxHealth() - this.health();
+    }
+
 }
