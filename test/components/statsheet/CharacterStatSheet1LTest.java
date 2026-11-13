@@ -1,35 +1,98 @@
-
 package components.statsheet;
+
+import static org.junit.Assert.assertEquals;
+//import static org.junit.Assert.assertFalse;
+//import static org.junit.Assert.assertNotSame;
+//import static org.junit.Assert.assertTrue;
+
+import org.junit.Test;
 
 /**
  * JUnit tests for CharacterStatSheet1L.
  */
-public class CharacterStatSheet1LTest extends CharacterStatSheetTest {
+public class CharacterStatSheet1LTest {
 
     /**
-     * Creates a default CharacterStatSheet1L for testing.
-     *
-     * @return a default character stat sheet
+     * Default maximum health.
      */
-    @Override
-    protected CharacterStatSheet constructorTest() {
-        return new CharacterStatSheet1L();
+    private static final int DEFAULT_HEALTH = 100;
+
+    /**
+     * Custom maximum health.
+     */
+    private static final int MAX_HEALTH = 150;
+
+    /**
+     * Custom attack statistic.
+     */
+    private static final int ATTACK = 30;
+
+    /**
+     * Custom defense statistic.
+     */
+    private static final int DEFENSE = 20;
+
+    /**
+     * Health value used in tests.
+     */
+    private static final int TEST_HEALTH = 50;
+
+    /**
+     * Damage value used in tests.
+     */
+    private static final int DAMAGE = 25;
+
+    /**
+     * Healing value used in tests.
+     */
+    private static final int HEALING = 20;
+
+    /**
+     * Tests the default constructor.
+     */
+    @Test
+    public void testDefaultConstructor() {
+        // Create a character with default statistics.
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Verify the default statistics.
+        assertEquals(DEFAULT_HEALTH, character.health());
+        assertEquals(DEFAULT_HEALTH, character.maxHealth());
+        assertEquals(0, character.attack());
+        assertEquals(0, character.defense());
     }
 
     /**
-     * Creates a CharacterStatSheet1L with the given statistics.
-     *
-     * @param maxHealth
-     *            maximum health
-     * @param attack
-     *            attack statistic
-     * @param defense
-     *            defense statistic
-     * @return a character with the given statistics
+     * Tests the constructor with custom statistics.
      */
-    @Override
-    protected CharacterStatSheet constructorTest(int maxHealth, int attack,
-            int defense) {
-        return new CharacterStatSheet1L(maxHealth, attack, defense);
+    @Test
+    public void testParameterizedConstructor() {
+        // Create a character with custom statistics.
+        CharacterStatSheet character = new CharacterStatSheet1L(MAX_HEALTH,
+                ATTACK, DEFENSE);
+
+        // Verify the starting statistics.
+        assertEquals(MAX_HEALTH, character.health());
+        assertEquals(MAX_HEALTH, character.maxHealth());
+        assertEquals(ATTACK, character.attack());
+        assertEquals(DEFENSE, character.defense());
+    }
+
+    /**
+     * Tests changing current health.
+     */
+    @Test
+    public void testSetHealth() {
+        // Create a default character.
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Update current health.
+        character.setHealth(TEST_HEALTH);
+
+        // Verify the updated and unchanged values.
+        assertEquals(TEST_HEALTH, character.health());
+        assertEquals(DEFAULT_HEALTH, character.maxHealth());
+        assertEquals(0, character.attack());
+        assertEquals(0, character.defense());
     }
 }
