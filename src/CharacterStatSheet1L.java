@@ -153,4 +153,19 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
         return this.stats.entry(DEFENSE_INDEX);
     }
 
+    /**
+     * Updates teh character's current health.
+     *
+     * @param health
+     *            the new current health
+     */
+    @Override
+    public void setHealth(int health) {
+        assert health >= 0 && health <= this
+                .maxHealth() : "Health must be within the allowed range";
+
+        // Replace the current health with the new value
+        this.stats.replaceEntry(HEALTH_INDEX, health);
+    }
+
 }
