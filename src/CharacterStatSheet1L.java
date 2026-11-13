@@ -224,4 +224,18 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
         // Restore the default sequence representation
         this.createNewRep();
     }
+
+    /**
+     * Creates a new character stat sheet of the same dynamic type.
+     *
+     * @return a new character stat sheet
+     */
+    @Override
+    public CharacterStatSheet newInstance() {
+        // Create a new character with default stats
+        CharacterStatSheet result = new CharacterStatSheet1L();
+
+        return result;
+    }
+
 }
