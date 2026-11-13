@@ -109,4 +109,48 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
         this.setDefense(defense);
     }
 
+    /**
+     * Reports the character's current health.
+     *
+     * @return the current health
+     */
+    @Override
+    public int health() {
+        // Retrieve current health from the sequence
+        return this.stats.entry(HEALTH_INDEX);
+    }
+
+    /**
+     * Reports the character's maximum health.
+     *
+     * @return the max health
+     */
+    @Override
+    public int maxHealth() {
+        // Retrieve maximum health from the sequence
+        return this.stats.entry(MAX_HEALTH_INDEX);
+    }
+
+    /**
+     * Reports the character's attack statistic.
+     *
+     * @return the attack stat
+     */
+    @Override
+    public int attack() {
+        // Retrieve attack stat from the sequence
+        return this.stats.entry(ATTACK_INDEX);
+    }
+
+    /**
+     * Reports the character's defense statistic.
+     *
+     * @return the defense stat
+     */
+    @Override
+    public int defense() {
+        // Retrieve defense stat from the sequence
+        return this.stats.entry(DEFENSE_INDEX);
+    }
+
 }
