@@ -139,7 +139,11 @@ to see them. If you don't like this workflow, you may try following the
 rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
 and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
-<!-- TODO: make a new branch from main then delete this comment -->
+## Pre-reflection
+
+For the final part of my portfiolio project, I plan to test my Character Stat Sheet component and make sure all of its operations work correctly. I will pay attention to its normal behavior as well as how it handles boundary cases, and situations where a character's stats change.
+
+Some important cases include taking more damage than the character has health, healing beyond maximum health, reducing maximum health below current helath, and transferring stats between two characters. I also plan on demonstrating my component through simulated combat and character progression.
 
 ## Assignment Tasks
 
