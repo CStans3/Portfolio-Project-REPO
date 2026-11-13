@@ -10,9 +10,33 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
-- Game inventory component design plans
-- Quest Tracker component design plans
-- Character stat sheet component design plans
+- Completed Part 1 component brainstorming.
+
+- Designed three possible components: Game Inventory,
+  Quest Tracker, and Character Stat Sheet.
+
+- Selected Character Stat Sheet for the portfolio project.
+
+- Created the CharacterStatSheet Java proof-of-concept.
+
+- Added representation fields for current health,
+  maximum health, attack, and defense.
+
+- Implemented getter and setter methods for character
+  statistics.
+
+- Added methods for taking damage, healing, checking
+  whether a character is alive, and calculating
+  missing health.
+
+- Added a method for displaying character statistics
+  using the OSU SimpleWriter component.
+
+- Created an interactive demonstration using
+  SimpleReader and SimpleWriter.
+
+- Documented the component selection, implementation,
+  and design decisions for Part 2.
 
 ### Removed
 
@@ -21,3 +45,9 @@ the following form: YYYY.0M.0D.
 ### Changed
 
 - repurposed template CHANGELOG.md to better suit my implementation of this project.
+
+## [2026.12.11]
+
+### Added
+
+- Published new branch and pushed pending changes.
