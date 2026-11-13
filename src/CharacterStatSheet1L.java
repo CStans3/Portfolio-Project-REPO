@@ -198,7 +198,7 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
     public void setAttack(int attack) {
         assert attack >= 0 : "Attack can't be negative";
 
-        // Replace the attaack value
+        // Replace the attack value
         this.stats.replaceEntry(ATTACK_INDEX, attack);
     }
 
