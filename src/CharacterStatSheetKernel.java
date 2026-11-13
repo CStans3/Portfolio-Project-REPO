@@ -7,6 +7,8 @@ import components.standard.Standard;
  * A character has current health, maximum health, attack, and defense
  * statistics.
  *
+ * @author Connor Stanfield
+ *
  * @mathmodel type CharacterStatSheetKernel is (health: integer, maxHealth:
  *            integer, attack: integer, defense: integer)
  * @initially <pre>

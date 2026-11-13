@@ -2,11 +2,12 @@
 /**
  * Enhanced interface for an RPG character stat sheet.
  *
- * Provides operations for taking damage, healing,
- * and checking the character's health status.
+ * Provides operations for taking damage, healing, and checking the character's
+ * health status.
+ *
+ * @author Connor Stanfield
  */
-public interface CharacterStatSheet
-        extends CharacterStatSheetKernel {
+public interface CharacterStatSheet extends CharacterStatSheetKernel {
 
     /**
      * Reduces current health without going below zero.
