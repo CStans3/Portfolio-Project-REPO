@@ -1,4 +1,5 @@
 import components.sequence.Sequence;
+import components.sequence.Sequence1L;
 
 /**
  * Character stat sheet represented using a Sequence of integers.
@@ -59,5 +60,27 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
      * Sequence containing the character's statistics.
      */
     private Sequence<Integer> stats;
+
+    /**
+     * Initializes the representation to its initial value.
+     */
+    private void createNewRep() {
+        // Create an empty sequence for thew statistics
+        this.stats = new Sequence1L<Integer>();
+
+        // Add the default stats in their required order
+        this.stats.add(this.stats.length(), DEFAULT_HEALTH);
+        this.stats.add(this.stats.length(), DEFAULT_HEALTH);
+        this.stats.add(this.stats.length(), DEFAULT_STAT);
+        this.stats.add(this.stats.length(), DEFAULT_STAT);
+    }
+
+    /**
+     * Creates a character with default statistics.
+     */
+    public CharacterStatSheet1L() {
+        // Initialize the character's represenation
+        this.createNewRep();
+    }
 
 }
