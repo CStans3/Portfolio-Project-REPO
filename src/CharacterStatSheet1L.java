@@ -215,4 +215,13 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
         // Replace the defense value
         this.stats.replaceEntry(DEFENSE_INDEX, defense);
     }
+
+    /**
+     * Resets the character to its initial value.
+     */
+    @Override
+    public void clear() {
+        // Restore the default sequence representation
+        this.createNewRep();
+    }
 }
