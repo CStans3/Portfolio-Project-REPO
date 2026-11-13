@@ -82,7 +82,7 @@ public abstract class CharacterStatSheetSecondary
 
     /**
      * Returns a string representation of the character statistics.
-     * 
+     *
      * @return the character statistics as a String
      */
     @Override
@@ -90,6 +90,49 @@ public abstract class CharacterStatSheetSecondary
         // Build a readable representation using kernel getters
         String result = "Health: " + this.health() + "/" + this.maxHealth()
                 + ", Attack: " + this.attack() + ", Defense: " + this.defense();
+
+        return result;
+    }
+
+    /**
+     * Checks whether this character has the same statistics as another.
+     *
+     * @param obj
+     *            the object to compare
+     * @return true if both objects have identical statistics
+     */
+    @Override
+    public boolean equals(Object obj) {
+        // Assume the objects aren't equal
+        boolean result = false;
+
+        // Check whether the object is a CharacterStatSheet
+        if (obj instanceof CharacterStatSheet other) {
+            // Compare all four stats using kernel methods
+            result = this.health() == other.health()
+                    && this.maxHealth() == other.maxHealth()
+                    && this.attack() == other.attack()
+                    && this.defense() == other.defense();
+        }
+
+        return result;
+    }
+
+    /**
+     * Computes a hash code from the character's statistics.
+     *
+     * @return the hash code
+     */
+    @Override
+    public int hashCode() {
+        // Combine the four stats into a single hash code
+        final int multiplier = 31;
+        int result = 1;
+
+        result = multiplier * result + this.health();
+        result = multiplier * result + this.maxHealth();
+        result = multiplier * result + this.attack();
+        result = multiplier * result + this.defense();
 
         return result;
     }
