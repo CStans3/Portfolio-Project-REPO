@@ -238,4 +238,33 @@ public class CharacterStatSheet1L extends CharacterStatSheetSecondary {
         return result;
     }
 
+    /**
+     * Transfers the source character's values into this character.
+     *
+     * @param source
+     *            the source character stat sheet
+     */
+    @Override
+    public void transferFrom(CharacterStatSheet source) {
+        assert source != null : "Source cannot be null";
+        assert source != this : "Source cannot be this object";
+        assert source.getClass() == this
+                .getClass() : "Source must have the same dynamic type";
+
+        // Save the source stats before changing either object
+        int sourceHealth = source.health();
+        int sourceMaxHealth = source.maxHealth();
+        int sourceAttack = source.attack();
+        int sourceDefense = source.defense();
+
+        // Replace this character's stats with the source values
+        this.stats.replaceEntry(HEALTH_INDEX, sourceHealth);
+        this.stats.replaceEntry(MAX_HEALTH_INDEX, sourceMaxHealth);
+        this.stats.replaceEntry(ATTACK_INDEX, sourceAttack);
+        this.stats.replaceEntry(DEFENSE_INDEX, sourceDefense);
+
+        // Reset the source character to its initial value
+        source.clear();
+    }
+
 }
