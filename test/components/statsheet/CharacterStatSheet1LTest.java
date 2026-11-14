@@ -387,4 +387,24 @@ public class CharacterStatSheet1LTest {
         assertEquals(0, source.defense());
     }
 
+    /**
+     * Tests equality and hash codes.
+     */
+    @Test
+    public void testEqualsAndHashCode() {
+        // Create two characters with identical stats
+        CharacterStatSheet first = new CharacterStatSheet1L(MAX_HEALTH, ATTACK,
+                DEFENSE);
+        CharacterStatSheet second = new CharacterStatSheet1L(MAX_HEALTH, ATTACK,
+                DEFENSE);
+
+        // Verify equality and matching hash codes
+        assertTrue(first.equals(second));
+        assertEquals(first.hashCode(), second.hashCode());
+
+        // Change one character and verify they're unequal
+        second.takeDamage(DAMAGE);
+        assertFalse(first.equals(second));
+    }
+
 }
