@@ -1,9 +1,9 @@
 package components.statsheet;
 
 import static org.junit.Assert.assertEquals;
-//import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertFalse;
 //import static org.junit.Assert.assertNotSame;
-//import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
@@ -159,6 +159,68 @@ public class CharacterStatSheet1LTest {
         // Verify defense changed
         assertEquals(DEFENSE, character.defense());
         assertEquals(0, character.attack());
+    }
+
+    /**
+     * Tests normal damage.
+     */
+    @Test
+    public void testTakeDamageNormal() {
+        // Create a default character
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Apply damage
+        character.takeDamage(DAMAGE);
+
+        // Verify the remaining health
+        assertEquals(DEFAULT_HEALTH - DAMAGE, character.health());
+        assertTrue(character.isAlive());
+    }
+
+    /**
+     * Tests damage equal to current health.
+     */
+    @Test
+    public void testTakeDamageExact() {
+        // Create a default character
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Reduce health to zero
+        character.takeDamage(DEFAULT_HEALTH);
+
+        // Verify the character is defeated
+        assertEquals(0, character.health());
+        assertFalse(character.isAlive());
+    }
+
+    /**
+     * Tests damage greater than current health.
+     */
+    @Test
+    public void testTakeExcessive() {
+        // Create a default character
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Apply more damage than the character has health
+        character.takeDamage(MAX_HEALTH);
+
+        // Verify health does not become negative
+        assertEquals(0, character.health());
+    }
+
+    /**
+     * Tests taking zero damage.
+     */
+    @Test
+    public void testTakeDamageZero() {
+        // Create a default character
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Apply zero damage
+        character.takeDamage(0);
+
+        // Verify health remains unchanged
+        assertEquals(DEFAULT_HEALTH, character.health());
     }
 
 }
