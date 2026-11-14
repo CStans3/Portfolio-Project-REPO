@@ -2,7 +2,7 @@ package components.statsheet;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-//import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -331,6 +331,33 @@ public class CharacterStatSheet1LTest {
         assertEquals(DEFAULT_HEALTH, character.maxHealth());
         assertEquals(0, character.attack());
         assertEquals(0, character.defense());
+    }
+
+    /**
+     * Tests creating a new instance.
+     */
+    @Test
+    public void testNewInstance() {
+        // New character with custom stats
+        CharacterStatSheet character = new CharacterStatSheet1L(MAX_HEALTH,
+                ATTACK, DEFENSE);
+
+        // Create a new instance
+        CharacterStatSheet result = character.newInstance();
+
+        // Verify the new instance has default stats
+        assertEquals(DEFAULT_HEALTH, result.health());
+        assertEquals(DEFAULT_HEALTH, result.maxHealth());
+        assertEquals(0, result.attack());
+        assertEquals(0, result.defense());
+
+        // Verify the objects are distinct
+        assertNotSame(character, result);
+
+        // Verify the original character wasn't changed
+        assertEquals(MAX_HEALTH, character.health());
+        assertEquals(ATTACK, character.attack());
+        assertEquals(DEFENSE, character.defense());
     }
 
 }
