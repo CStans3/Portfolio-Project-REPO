@@ -195,3 +195,8 @@ the following form: YYYY.0M.0D.
 
 - Merged all branches with main to reflect work done.
 - Submitted pull request to Canvas
+
+### Updated
+
+- Included responses to reflection questions found in the DIRECTIONS.md file.
+- Responses were similar to part 6 post-reflection so I made sure to amp up my responses for the official end of assignment reflection.

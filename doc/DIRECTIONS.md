@@ -76,18 +76,22 @@ a few sentences per question would be ideal.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I'm not entirely sure whether I understand software development better or not. I feel like having the resources and time available to me made a big difference in my ability to create something that actually worked. Unlike in an exam environment, where I tend to p anic and feel like countless hours of preparation go down the drain, working on this project at home made me feel more in my element. I was able to take my time, reference previous labs and project, and apply things that I've learned throughout the semester. I think this project helped me realize that I'm more capable of aplying what I've learned when I'm not under the pressure of an exam.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+One of the biggest gaps in my knowledge was understanding how the JUnit testing interface worked in VS Code. Throughout the semester, I had been mostly hoping my test cases were working correctly without fully understanding how to run or interpret them. I was more familiar with Eclipse's JUnit testing environment from last semester so adjusting to VS Code was frustrating.
+
+When I initially tried organizing my tests into two separate files, like the example directory structure showed, I ran into several issues where the tests wouldn't run at all. After struggling with that setup, I decided to simplify evereything into a single test file, which finally allowed my tests to run properly. I also learend how to interpret the test results, including that the message `The test run did not record any output` simply means the tests didn't produce console output. Instead I needed to look at the JUnit test results to confirm whether each test passed or failed. Although this was one of the more stressful parts of the project, I feel like I have a much better understanding of how to use JUnit in VS Code now.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I Still enjoy software development. I just don't enjoy exams. I understand that exams come with taking classes, but I've always struggled with test-taking, and this semester has been no different. After seeing how poorly I was doing on my exams, I knew I needed to complete this project regardless of how little time I had left, to try to salvage my grade.
+
+I think this project would have been more enjoyable if I hadn't procrastinated as much as I did. The JUnit testing issues especially stressed me out because I was already running short on time. Had I started earlier, I think this could have been a much more relaxing and interesting way to reinforce the fundamanetals I've learned throughout the semester. Despite the frustration, I still enjoyed being able to work on something I chose myself and seeing it come together.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -95,25 +99,41 @@ a few sentences per question would be ideal.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+One surprisingly useful skill I picked up was learning how to work more efficiently by reusing similar code. A lot of the methods in my component had nearly identical structures, with the main difference being their names and the statistics they worked with. For example my `health()` and `attack()` getter methods followed the same basic pattern, so I could copy one method and then carefuylly update the names, comments, and implementation to match the other. Small things like this helped speed up development and made it easier to stay on schedule.
+
+I also reinforced my understanding of how to organize a component into separate interfaces, abstract classes, and concrete implementations. My orginal proof-of-concept stored the character's stats directly as individual field, but I later changed the implementation to use a `Sequence<Integer>`. Making that change helped me better understand the difference between a component's mathematical model and how its data is actaully stored. I also gained more experience with JUnit testing, troubleshooting errors in VS Code, and managing a project through GitHub.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Designed and implemented a reusable Java component using interfaces, abstract classes, and object-oriented programming principles.
+
+- Used Java data structures to manage and update character statistics while maintaining representation invariants.
+
+- Developed JUnit 4 tests to verify component functionality and boundary conditions.
+
+- Used Git and GitHub for version control and organizing project development.
+
+- Troubleshot Java compilation, dependency, and testing configuration issues in Visual Studio Code.
+
+- Created technical documentation describing component design, implementation, and practical use cases.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This project hasn't really shifted my career goals, but it has helped me better understand which parts of programming interest me the most. I still like the idea of working in software development, particularly on projects involving applications that people can interact with. At the same time, I've realized that I need a lot more practice with the fundamentals before I feel confident pursuing software development professionally.
+
+I think I would enjoy working on projects where I can actually see and interact with what I'm creating, rather than focusing entirely on the underlying code. This project reinforced that interest, even though I spent most of my time working on the component's internal implementation. I still want to explore different areas of software development before deciding exactly what direction I want to take.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+To continue improving, I want to work on more small personal proejcts, especially ones involving games or front-end development. I also want to become more comfortable with Java, learn more about web development, and practice using GitHub so I can start building a portfolio for future internships. I think working on projects outside of class would help me build confidence without the pressure of exams or strict deadlines.
+
+Some people I could reach out to for guidance would include Professor Griski and other students who have already landed internships. I should also attend more career events on campus to learn about different career paths and opportunities. I've also received emails about the Software Enginerring club and their hackathons, and I've considered reaching out to see how I could get involved, even with my limited experience. I think participating in something like that could be a good opportunity to learn from other students and gain more practical experience.
 
 ## Assignment Advice
 
