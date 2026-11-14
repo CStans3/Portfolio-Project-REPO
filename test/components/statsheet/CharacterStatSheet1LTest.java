@@ -286,4 +286,31 @@ public class CharacterStatSheet1LTest {
         assertEquals(TEST_HEALTH, character.health());
     }
 
+    /**
+     * Tests missing health.
+     */
+    @Test
+    public void testHealthMissing() {
+        // new character
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Apply damage
+        character.takeDamage(DAMAGE);
+
+        // Verify the amount of missing health
+        assertEquals(DAMAGE, character.healthMissing());
+    }
+
+    /**
+     * Tests missing health when at full.
+     */
+    @Test
+    public void testHealthMissingFull() {
+        // new character
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Verify no health is missing
+        assertEquals(0, character.healthMissing());
+    }
+
 }
