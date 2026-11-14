@@ -309,18 +309,18 @@ Take some time to fill them out honestly.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I'll be honest, I dont' really know if I understand it better or not. I feel like I had the resources and time at my disposal to make something that worked. Unlike in a test environment where I panic and countless hours of prep go down the drain, here at home designing this I felt in my element and like I was able to apply things that I've seen from our labs and projects.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+The JUnit testing interface. I've been coasting by hoping my test cases where working and not really understanding how it worked on VScode, since I was used to last semesters eclipse JUnit testing environment. At least here when I tried to make two testing files like shown in the example tree above my testing just came crashing down. It just didn't work at all, and after limiting down to a single test file my test cases would actually function and tell me if they failed or passed. Another thing was that I had to be sure my test cases were working and I was able to find out that when the test terminal says `the test run did not record any output.` it means it worked since the test cases don't return out string output it's using the JUnit components to just make sure it didn't fail.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I still enjoy it, I just don't enjoy the exams. I know it comes with the territory of it being a class and all, but I just absolutely struggle with test taking I've never been any good at it. So when I starting already doing bad on my exams I knew I had to complete this no matter how little time I had left so I could try and salvage something. I think This would have been way more enjoyable had I not procrastinated so hard (the Junit testing really stressed me out) this would have been a more relaxing and interesting way to really lay down the fundamentals of what I've learned so far.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -328,29 +328,32 @@ Take some time to fill them out honestly.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+Copy and pasting, so many methods have the same signature and are literally identical bar their names. So like with my `health()` or `attack()` getter methods I would just copy and paste those and then go through and change the health parts of the naming or comments and change it appropriately. Minor things like that helps speed up the process and made sure I was staying on schedule to be able to turn in this project. I also reinforced knowing how to organize a component into separate interfaces, classes, and implementations. My original proof-of-concept stored the stats directly, but with later swapping to using a Sequence of integers I was able to better understand the difference between a component's mathematical model and how the data is really stored.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Designed and implemented a reusable Java component using interfaces, abstract classes, and object-oriented programming principles.
+- Used Java data structures to manage and update character statistics while maintaining representaiton invariants.
+- Developed JUnit 4 tests to verify component functionality and boundary conditions.
+- Used Git and GitHub for version control and organizing project development.
+- Troubleshot java compilation, dependency, and testing configuration issued in Visual Studio Code.
+- Created techincal documentation describing component design, implementation, and use cases.
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+This project hasn't shifted my career goals, but it has helped me understand what parts of programming interest me the most. I still like working in software development, particularly on projects related to applications that people interact with. At the same time, I've realized I need way more practice with fundamentals before I feel confident pursuing it professionally. I think I would enjoy working on projects where I can see and interact with what I'm creating rather than focusing entirely on the underlying code.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+To continue improving, I want to work on more smaller personal projects, especially ones involving games or front-end development. I also want to become more comfortable with java, learn more about web development, and practice using GitHub so I can start building a portfolio for internships. Some people I might reach out to for guidance would be Prof Grifski, and other students who've already landed internships. I should also go to career events being held on campus to learn about my different career paths. I also received some emails about the SWE club and their hackathons, I might reach out and see what I can do their with my limited experience.
 
 ### Changelog
-
-<!-- TODO: update CHANGELOG then delete this comment -->
 
 At the end of every assignment, you should update the
 [CHANGELOG.md](../../CHANGELOG.md) file found in the root of the project folder.
@@ -385,8 +388,6 @@ like to accomplish that, you will need to make GitHub releases after each pull
 request merge (or at least tag your commits). This is not required.
 
 ### Submission
-
-<!-- TODO: read the submission instructions then delete this comment -->
 
 Assuming that your project is in a GitHub repo somewhere and your changes are on
 a proof-of-concept branch, then what we'll want you to do is create a pull
@@ -437,7 +438,5 @@ PDF to read this rubric as a table).
 If you'd like to give feedback for this assignment (or any assignment, really),
 make use of [this survey][survey]. Your feedback helps make assignments
 better for future students.
-
-<!-- TODO: follow the link to share your feedback then delete this comment -->
 
 [survey]: https://forms.gle/dumXHo6A4Enucdkq9

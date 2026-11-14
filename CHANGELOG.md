@@ -168,4 +168,30 @@ the following form: YYYY.0M.0D.
 
 ### Added
 
--
+- Added CharacterStatSheet1LTest with JUnit 4 tests.
+
+- Added tests for constructors, kernel methods, secondary
+  methods, and Standard methods.
+
+- Added tests for damage, healing, and health boundaries.
+
+- Added CharacterStatSheetDemo for direct component use.
+
+- Added RPGCharacter as a component composition example.
+
+- Added final project documentation and reflection.
+
+### Changed
+
+- Simplified testing to one concrete JUnit test class.
+
+- Organized source and test files into matching packages.
+
+- Reviewed component documentation and code style.
+
+## [1.0.0] - [2026.11.13]
+
+### Added
+
+- Merged all branches with main to reflect work done.
+- Submitted pull request to Canvas
