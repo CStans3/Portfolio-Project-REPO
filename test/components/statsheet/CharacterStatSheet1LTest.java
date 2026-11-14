@@ -407,4 +407,18 @@ public class CharacterStatSheet1LTest {
         assertFalse(first.equals(second));
     }
 
+    /**
+     * Tests the string representation.
+     */
+    @Test
+    public void testToString() {
+        // New character with custom stats
+        CharacterStatSheet character = new CharacterStatSheet1L(MAX_HEALTH,
+                ATTACK, DEFENSE);
+
+        // Verify teh formatted statistics
+        String expected = "Health: 150/150, Attack: 30, Defense: 20";
+        assertEquals(expected, character.toString());
+    }
+
 }
