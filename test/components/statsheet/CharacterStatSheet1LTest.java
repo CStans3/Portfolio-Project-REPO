@@ -360,4 +360,31 @@ public class CharacterStatSheet1LTest {
         assertEquals(DEFENSE, character.defense());
     }
 
+    /**
+     * Tests transferring statistics between characters.
+     */
+    @Test
+    public void testTransferFrom() {
+        // new source and destination characters
+        CharacterStatSheet source = new CharacterStatSheet1L(MAX_HEALTH, ATTACK,
+                DEFENSE);
+        CharacterStatSheet destination = new CharacterStatSheet1L();
+
+        // Modify the source and transfer its stats
+        source.takeDamage(DAMAGE);
+        destination.transferFrom(source);
+
+        // Verify the destination received the source values
+        assertEquals(MAX_HEALTH - DAMAGE, destination.health());
+        assertEquals(MAX_HEALTH, destination.maxHealth());
+        assertEquals(ATTACK, destination.attack());
+        assertEquals(DEFENSE, destination.defense());
+
+        // Verify the source returned to its initial value
+        assertEquals(DEFAULT_HEALTH, source.health());
+        assertEquals(DEFAULT_HEALTH, source.maxHealth());
+        assertEquals(0, source.attack());
+        assertEquals(0, source.defense());
+    }
+
 }
