@@ -223,4 +223,67 @@ public class CharacterStatSheet1LTest {
         assertEquals(DEFAULT_HEALTH, character.health());
     }
 
+    /**
+     * Tests normal healing.
+     */
+    @Test
+    public void testHealNormal() {
+        // Create a character with reduced health
+        CharacterStatSheet character = new CharacterStatSheet1L();
+        character.setHealth(TEST_HEALTH);
+
+        // Restore some health
+        character.heal(HEALING);
+
+        // Verify the restored health
+        assertEquals(TEST_HEALTH + HEALING, character.health());
+    }
+
+    /**
+     * Tests healing beyond maximum health.
+     */
+    @Test
+    public void testHealExcessive() {
+        // Create a character with reduced health
+        CharacterStatSheet character = new CharacterStatSheet1L();
+        character.setHealth(TEST_HEALTH);
+
+        // Attempt to heal beyond maximum health
+        character.heal(MAX_HEALTH);
+
+        // Verify health is capped at the maximum
+        assertEquals(DEFAULT_HEALTH, character.health());
+    }
+
+    /**
+     * Tests healing when already at maximum health.
+     */
+    @Test
+    public void testHealAtMaximum() {
+        // Create a default character
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Attempt to heal at full health
+        character.heal(HEALING);
+
+        // Verify that health remains unchanged
+        assertEquals(DEFAULT_HEALTH, character.health());
+    }
+
+    /**
+     * Tests healing by zero.
+     */
+    @Test
+    public void testHealZero() {
+        // Creata a character with reduced health
+        CharacterStatSheet character = new CharacterStatSheet1L();
+        character.setHealth(TEST_HEALTH);
+
+        // Apply zero healing
+        character.heal(0);
+
+        // Verify health remains unchanged
+        assertEquals(TEST_HEALTH, character.health());
+    }
+
 }
