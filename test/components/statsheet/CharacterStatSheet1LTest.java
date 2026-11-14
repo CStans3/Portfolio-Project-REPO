@@ -129,4 +129,36 @@ public class CharacterStatSheet1LTest {
         assertEquals(MAX_HEALTH, character.maxHealth());
     }
 
+    /**
+     * Tests changing attack.
+     */
+    @Test
+    public void testSetAttack() {
+        // Create a default character
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Update attack
+        character.setAttack(ATTACK);
+
+        // Verify attack changed
+        assertEquals(ATTACK, character.attack());
+        assertEquals(0, character.defense());
+    }
+
+    /**
+     * Tests changing defense.
+     */
+    @Test
+    public void testSetDefense() {
+        // Create a default character
+        CharacterStatSheet character = new CharacterStatSheet1L();
+
+        // Update defense
+        character.setDefense(DEFENSE);
+
+        // Verify defense changed
+        assertEquals(DEFENSE, character.defense());
+        assertEquals(0, character.attack());
+    }
+
 }
