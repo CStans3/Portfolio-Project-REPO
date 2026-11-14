@@ -107,15 +107,10 @@ I also reinforced my understanding of how to organize a component into separate 
 > as bullet points that you could put on a resume? Try it below.
 
 - Designed and implemented a reusable Java component using interfaces, abstract classes, and object-oriented programming principles.
-
 - Used Java data structures to manage and update character statistics while maintaining representation invariants.
-
 - Developed JUnit 4 tests to verify component functionality and boundary conditions.
-
 - Used Git and GitHub for version control and organizing project development.
-
 - Troubleshot Java compilation, dependency, and testing configuration issues in Visual Studio Code.
-
 - Created technical documentation describing component design, implementation, and practical use cases.
 
 > Next, how has working on this project affected your career trajectory?
