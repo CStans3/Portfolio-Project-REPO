@@ -72,6 +72,10 @@ public final class CharacterStatSheetDemo {
         out.println(warrior);
         out.println();
 
+        // Check whether the character is alive.
+        out.println("Alive: " + warrior.isAlive());
+        out.println();
+
         // Close the output stream
         out.close();
     }
