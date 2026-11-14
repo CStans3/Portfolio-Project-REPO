@@ -416,7 +416,7 @@ public class CharacterStatSheet1LTest {
         CharacterStatSheet character = new CharacterStatSheet1L(MAX_HEALTH,
                 ATTACK, DEFENSE);
 
-        // Verify teh formatted statistics
+        // Verify the formatted statistics
         String expected = "Health: 150/150, Attack: 30, Defense: 20";
         assertEquals(expected, character.toString());
     }
