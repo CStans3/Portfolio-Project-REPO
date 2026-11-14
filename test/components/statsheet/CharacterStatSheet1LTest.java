@@ -313,4 +313,24 @@ public class CharacterStatSheet1LTest {
         assertEquals(0, character.healthMissing());
     }
 
+    /**
+     * Tests resetting a modified character.
+     */
+    @Test
+    public void testClear() {
+        // Creat a custom stat character
+        CharacterStatSheet character = new CharacterStatSheet1L(MAX_HEALTH,
+                ATTACK, DEFENSE);
+
+        // Modify the character before clearing
+        character.takeDamage(DAMAGE);
+        character.clear();
+
+        // Verify all stats got reset
+        assertEquals(DEFAULT_HEALTH, character.health());
+        assertEquals(DEFAULT_HEALTH, character.maxHealth());
+        assertEquals(0, character.attack());
+        assertEquals(0, character.defense());
+    }
+
 }
