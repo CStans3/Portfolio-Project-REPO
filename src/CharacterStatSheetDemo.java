@@ -31,6 +31,11 @@ public final class CharacterStatSheetDemo {
     private static final int DAMAGE = 25;
 
     /**
+     * Amount of healing received.
+     */
+    private static final int HEALING = 20;
+
+    /**
      * Private constructor to prevent instantiation.
      */
     private CharacterStatSheetDemo() {
@@ -50,9 +55,22 @@ public final class CharacterStatSheetDemo {
         CharacterStatSheet warrior = new CharacterStatSheet1L(STARTING_HEALTH,
                 STARTING_ATTACK, STARTING_DEFENSE);
 
-        // Display teh starting stats
+        // Display the starting stats
         out.println("Starting Character:");
         out.println(warrior);
+        out.println();
+
+        // Demonstrate taking damage
+        warrior.takeDamage(DAMAGE);
+        out.println("After taking damage:");
+        out.println(warrior);
+        out.println();
+
+        // Demonstrate healing
+        warrior.heal(HEALING);
+        out.println("After healing:");
+        out.println(warrior);
+        out.println();
 
         // Close the output stream
         out.close();
